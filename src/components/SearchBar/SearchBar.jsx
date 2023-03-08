@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { InputAdornment, TextField, IconButton, Typography } from '@material-ui/core';
-import Language from '@mui/icons-material/Search';
 import Search from '@mui/icons-material/Search';
 
 
@@ -10,9 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     width: '100%',
     maxWidth: 400,
-    border: `1px solid ${theme.palette.grey[400]}`,
     borderRadius: theme.shape.borderRadius,
-    padding: theme.spacing(0.5, 1),
   },
   searchInput: {
     flexGrow: 1,
@@ -20,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function SearchBar() {
   const classes = useStyles();
 
   return (
@@ -37,10 +34,6 @@ export default function Navbar() {
           ),
         }}
       />
-      <IconButton>
-        <Language />
-      </IconButton>
-      <Typography variant="body1">English</Typography>
     </div>
   );
 }

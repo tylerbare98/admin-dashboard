@@ -12,3 +12,13 @@
 .bottom > .icon {
   margin-left: 38px;
 }
+
+.toolbar{
+  display: flex;
+  justify-content: space-between
+}
+
+.rightSideNavBar{
+  display: flex;
+  align-items: center;
+}

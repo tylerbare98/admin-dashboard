@@ -14,11 +14,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import styles from './Sidebar.module.css'
-import Navbar from '../Navbar/Navbar';
+import SearchBar from '../SearchBar/SearchBar';
 import { Switch, FormControlLabel } from '@material-ui/core';
 import {Dashboard, Person, Store, CreditCard, LocalShipping, Psychology, AccountCircle, Logout,
-        BarChart, Notifications, SettingsSystemDaydream, Settings,
-        LightMode, DarkMode} from '@mui/icons-material';
+        BarChart, Notifications, SettingsSystemDaydream, Settings, Language, NotificationsNoneOutlined, 
+        LanguageOutlined, DarkModeOutlined, FullscreenExitOutlined, ChatBubbleOutline,
+        ListOutlined
+        } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -130,7 +132,7 @@ export default function Sidebar(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar className={styles.toolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -140,7 +142,29 @@ export default function Sidebar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Navbar />
+          <SearchBar/>
+          {/* below is the right side stuff of navbar */}
+          <div className={styles.rightSideNavBar}>
+            <IconButton>
+              <LanguageOutlined />
+            </IconButton>
+            <IconButton>
+              <DarkModeOutlined />
+            </IconButton>
+            <IconButton>
+              <FullscreenExitOutlined />
+            </IconButton>
+            <IconButton>
+              <NotificationsNoneOutlined />
+            </IconButton>
+            <IconButton>
+              <ChatBubbleOutline />
+            </IconButton>
+            <IconButton>
+              <ListOutlined />
+            </IconButton>
+          </div>
+          {/* above is the right side stuff of navbar */}
         </Toolbar>
       </AppBar>
       <Box
