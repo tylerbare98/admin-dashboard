@@ -15,8 +15,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import styles from './Sidebar.module.css'
 import Navbar from '../Navbar/Navbar';
+import { Switch, FormControlLabel } from '@material-ui/core';
 import {Dashboard, Person, Store, CreditCard, LocalShipping, Psychology, AccountCircle, Logout,
-        BarChart, Notifications, SettingsSystemDaydream, Settings} from '@mui/icons-material';
+        BarChart, Notifications, SettingsSystemDaydream, Settings,
+        LightMode, DarkMode} from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -30,7 +32,7 @@ export default function Sidebar(props) {
 
   const drawer = (
     <>
-      <Toolbar className={styles.top}><Typography variant="h5">Administration</Typography></Toolbar>
+      <Toolbar className={styles.top}><Typography color="primary" variant="h5">Administration</Typography></Toolbar>
         
       <Divider />
       <List>
@@ -99,6 +101,20 @@ export default function Sidebar(props) {
         ))}
       </List>
       <Divider />
+      <List>
+            <div className={styles.bottom}>
+              <FormControlLabel
+                  control={
+                      <Switch
+                      checked={true}
+                      name="darkMode"
+                      color="primary"
+                      />
+                  }
+                  label={'Dark'}
+                />
+            </div>
+      </List>
     </>
   );
 

@@ -2,4 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom > .icon {
+  margin-left: 38px;
+}
